@@ -7,10 +7,19 @@ TO-DO:
 Fix/improve interest alg
 Improve preproc
 Make the program not suck ;)
+
+DON'T COMMIT IF IT DOESN'T WORK
 '''
 nodes = 4
-pairs = list(range(0,nodes+1))
-graph = ia.gen(list(itertools.combinations(pairs,2)),nodes)
+pairs = [
+	[1,2],
+	[1,3],
+	[1,4],
+	[2,3],
+	[2,4],
+	[3,4]
+]
+graph = ia.gen(pairs,nodes)
 igraph = graph[1]
 graph = graph[0]
 
