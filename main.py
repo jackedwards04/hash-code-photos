@@ -10,14 +10,18 @@ Make the program not suck ;)
 
 DON'T COMMIT IF IT DOESN'T WORK
 '''
-nodes = 4
+nodes = 5
 pairs = [
 	[1,2],
 	[1,3],
 	[1,4],
+	[1,5],
 	[2,3],
 	[2,4],
-	[3,4]
+	[2,5],
+	[3,4],
+	[3,5],
+	[4,5]
 ]
 graph = ia.gen(pairs,nodes)
 igraph = graph[1]

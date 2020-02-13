@@ -1,6 +1,6 @@
 import random
 graph = []
-nodes = 4
+nodes = 5
 interests = [
     ]
 iout = []
@@ -29,9 +29,9 @@ def allNode(graph,size):
 def nextNode(interestIn):
   return(max(interestIn, key = lambda s: s[2]))
 
-def graphGen(interests):
+def graphGen(interests,node):
 	print(interests)
-	while not allNode(graph,4):
+	while not allNode(graph,node):
 			tNode = nextNode(interests)
 			if (isGraph(graph+[tNode])):
 				graph.append(tNode[0:2])
@@ -42,5 +42,5 @@ def gen(inte,nod):
 	interests = inte
 	interests = [n+[nodeInterest(n)] for n in interests]
 	nodes = nod
-	graphGen(interests)
+	graphGen(interests,nodes)
 	return([graph,iout])
